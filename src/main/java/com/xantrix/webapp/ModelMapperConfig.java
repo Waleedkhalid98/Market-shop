@@ -24,7 +24,10 @@ public class ModelMapperConfig
 		modelMapper.getConfiguration().setSkipNullEnabled(true);
 
 		modelMapper.addMappings(articoliMapping);
+		/*
 		modelMapper.addMappings(barcodeMapping);
+
+		 */
 		modelMapper.addConverter(articoliConverter);
 		modelMapper.addConverter(utentiConverter);
 
@@ -40,6 +43,7 @@ public class ModelMapperConfig
 	         map().setDataCreazione(source.getDataCreaz());
 	      }
 	};
+	/*
 	PropertyMap<Barcode, BarcodeDto> barcodeMapping = new PropertyMap<Barcode,BarcodeDto>()
 	{
 		@Override
@@ -51,6 +55,9 @@ public class ModelMapperConfig
 		}
 
 	};
+
+
+	 */
 
 	Converter<String, String> articoliConverter = new Converter<String, String>() 
 	{
